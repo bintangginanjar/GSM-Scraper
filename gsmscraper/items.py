@@ -17,3 +17,4 @@ class HalloGsmItem(scrapy.Item):
     brandName = Field()
     modelName = Field()
     specs = Field()
+    imageSrc = Field()

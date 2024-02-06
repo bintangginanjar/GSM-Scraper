@@ -97,6 +97,7 @@ class HalloGsmSpider(scrapy.Spider):
         phone['phoneNumber'] = self.phoneNumber
         phone['brandName'] = brandName
         phone['modelName'] = modelName
+        phone['imageSrc'] = response.css('div.aps-content > div.aps-single-product > div.aps-row > div.aps-product-pic > div.aps-main-image > img::attr(src)').get()
         phone['specs'] = []
         phone['specs'].append(phoneInfo)
 
